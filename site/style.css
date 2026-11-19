@@ -1,0 +1,75 @@
+:root {
+  --bg: #fffbeb;
+  --card: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --primary: #f59e0b;
+  --primary-dark: #b45309;
+  --border: #fde68a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --primary: #fbbf24;
+    --primary-dark: #fcd34d;
+    --border: #334155;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+header {
+  background: linear-gradient(135deg, #ffd700, #f59e0b 55%, #fbbf24);
+  color: #1e293b;
+  padding: 28px 16px 36px;
+  border-radius: 0 0 28px 28px;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header .wrap { padding: 0; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; text-decoration: none; color: inherit; }
+.brand span { font-size: 30px; }
+header h1 { margin: 18px 0 4px; font-size: 28px; line-height: 1.25; }
+header p { margin: 0; opacity: 0.85; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+nav a {
+  background: #ffffff66;
+  color: #1e293b;
+  padding: 6px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+nav a[aria-current="page"] { background: #ffffff; }
+main { padding: 24px 0 48px; }
+section.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px 22px;
+  margin-bottom: 16px;
+}
+h2 { margin: 0 0 10px; font-size: 20px; }
+h3 { margin: 18px 0 6px; font-size: 17px; }
+ul { padding-left: 20px; margin: 8px 0; }
+li { margin: 4px 0; }
+a { color: var(--primary-dark); }
+.muted { color: var(--muted); font-size: 14px; }
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #1e293b;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+.lang { border-top: 2px dashed var(--border); margin-top: 32px; padding-top: 8px; }
+footer { text-align: center; padding: 0 16px 32px; color: var(--muted); font-size: 14px; }
